@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}tz.png" alt="example" style="max-height: 300px"/>
+</p>
+
+<p style="text-align: justify;">
+    Тобі дано {% if is_js %}масив{% else %}список{% endif %} завдань. Кожне із них - це кортеж рядків (початок, кінець, часовий пояс). Часові пояси мають коректні назви відповідно до <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">бази даних часових поясів</a>.
+</p>
+<p style="text-align: justify;">
+    Твоя функція повинна повернути відфільтрований {% if is_js %}масив{% else %}список{% endif %} завдань, що можуть бути заплановані без накладки. Якщо декілька завдань починаються в один і той самий час, бери найкоротше. Результатний {% if is_js %}масив{% else %}список{% endif %} повинен бути відсортований від найранішого завдання до виконання до найпізнішого.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Вхідні дані:</strong> Завдання як {% if is_js %}масив{% else %}список{% endif %} кортежів з трьох рядків.
+</p>
+
+<p>
+    <strong>Вихідні дані:</strong> Завдання, що не накладаються, як сортований {% if is_js %}масив{% else %}список{% endif %} кортежів з трьох рядків. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>Сфера застосування:</strong>
+    <i>Правильне планування - це актуальна проблема для всіх, хто має зустрічі та завдання, які слід виконувати в різних часових поясах.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
